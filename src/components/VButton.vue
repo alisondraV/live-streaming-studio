@@ -1,6 +1,7 @@
 <template>
     <button :class="`rounded-lg w-52 py-4 font-bold
-      ${getVariant === ButtonVariant.Primary ? 'bg-gray1' : 'bg-emerald text-white'}`">
+      ${getVariant === ButtonVariant.Primary ? 'bg-emerald text-white' : 'bg-gray1'}`"
+    >
       {{ props.label }}
     </button>
 </template>
