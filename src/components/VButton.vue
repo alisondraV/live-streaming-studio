@@ -1,5 +1,5 @@
 <template>
-    <button :class="`rounded-lg w-52 py-4 font-bold
+    <button :class="`rounded-lg w-full py-4 font-bold
       ${getVariant === ButtonVariant.Primary ? 'bg-emerald text-white' : 'bg-gray1'}`"
     >
       {{ props.label }}
