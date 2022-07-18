@@ -2,7 +2,7 @@
   <div class="flex">
     <div class="h-screen p-4 w-1/5 border-r-2 border-gray2">
       <v-button label="Add source" class="mb-4" />
-      <media-import-button />
+      <media-import-button :handle-button-click="toggleModal" />
     </div>
     <div class="h-screen w-full flex justify-center items-center">
       <div class="bg-black w-5/6 h-2/3"></div>
@@ -15,10 +15,19 @@
       <v-button label="Go Live" />
     </div>
   </div>
+  <add-media-modal v-if="isModalOpen" @click="toggleModal" />
 </template>
 
 <script lang="ts" setup>
 import VButton from '@/components/VButton.vue';
 import { ButtonVariant } from '@/utils';
 import MediaImportButton from '@/components/MediaImportButton.vue';
+import { ref } from 'vue';
+import AddMediaModal from '@/components/AddMediaModal.vue';
+
+const isModalOpen = ref(false);
+
+const toggleModal = () => {
+  isModalOpen.value = !isModalOpen.value;
+}
 </script>
