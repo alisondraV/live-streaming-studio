@@ -1,8 +1,8 @@
 <template>
   <div class="flex">
     <div class="h-screen p-4 w-1/5 border-r-2 border-gray2">
-      <v-button label="Add source" class="mb-4" />
       <media-import-button :handle-button-click="toggleModal" />
+      <feed-tile :img="camera" text="My video feed" />
     </div>
     <div class="h-screen w-full flex justify-center items-center">
       <div class="bg-black w-5/6 h-2/3"></div>
@@ -24,6 +24,8 @@ import { ButtonVariant } from '@/utils';
 import MediaImportButton from '@/components/MediaImportButton.vue';
 import { ref } from 'vue';
 import AddMediaModal from '@/components/AddMediaModal.vue';
+import FeedTile from '@/components/FeedTile.vue';
+import camera from '../assets/camera.png';
 
 const isModalOpen = ref(false);
 

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray1 px-6 py-20 text-center rounded-lg cursor-pointer">
     <h1 class="mb-4">{{ props.header }}</h1>
-    <p>{{ props.text }}</p>
+    <h6>{{ props.text }}</h6>
   </div>
 </template>
 
