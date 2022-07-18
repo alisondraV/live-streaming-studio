@@ -13,7 +13,7 @@ h1 {
     font-weight: bold;
 }
 
-p {
+h6 {
     font-size: 10px;
     line-height: 12px;
     @apply text-gray3;

@@ -5,7 +5,7 @@
   >
     <p class="text-emerald text-5xl">+</p>
     <h1 class="text-center py-2">Add media source</h1>
-    <p>Screenshare, Camera</p>
+    <h6>Screenshare, Camera</h6>
   </div>
 </template>
 
