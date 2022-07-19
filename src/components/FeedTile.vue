@@ -7,7 +7,8 @@
     <v-button
       label="Show on stream"
       class="w-3/4"
-      :variant="isActive ? ButtonVariant.Media : ButtonVariant.Primary"
+      :handle-click="() => store.updateCurrentFeed(img)"
+      :variant="isActiveTile() ? ButtonVariant.Media : ButtonVariant.Primary"
     />
     <p class="text-white absolute bottom-2 left-2">{{ props.text }}</p>
   </div>
@@ -16,10 +17,14 @@
 <script lang="ts" setup>
 import VButton from '@/components/VButton.vue';
 import { ButtonVariant } from '@/utils';
+import { store } from '@/store';
 
 const props = defineProps<{
-  img: any,
+  img: string,
   text: string,
-  isActive?: boolean,
 }>();
+
+function isActiveTile(): boolean {
+  return store.currentFeed === props.img;
+}
 </script>

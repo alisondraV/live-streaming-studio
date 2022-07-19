@@ -1,5 +1,8 @@
 <template>
-    <button :class="`rounded-lg w-full py-4 font-bold ${getVariantStyle()}`">
+    <button
+      @click="props.handleClick"
+      :class="`rounded-lg w-full py-4 font-bold ${getVariantStyle()}`"
+    >
       {{ props.label }}
     </button>
 </template>
@@ -9,13 +12,14 @@ import { ButtonVariant } from '@/utils';
 
 const props = defineProps<{
   label: string,
+  handleClick?: void,
   variant?: ButtonVariant
 }>();
 
-const variant = props.variant ?? ButtonVariant.Primary;
-
 function getVariantStyle(): string {
-  switch (variant) {
+  const buttonVariant = props.variant ?? ButtonVariant.Primary;
+
+  switch (buttonVariant) {
     case ButtonVariant.Primary:
       return 'bg-emerald text-white';
     case ButtonVariant.Secondary:
