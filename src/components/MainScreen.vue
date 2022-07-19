@@ -1,8 +1,9 @@
 <template>
   <div class="flex">
     <div class="h-screen p-4 w-1/5 border-r-2 border-gray2">
-      <media-import-button :handle-button-click="toggleModal" />
-      <feed-tile :img="camera" text="My video feed" />
+      <media-import-button :handle-button-click="toggleModal" class="mb-4" />
+      <feed-tile :img="camera" text="My video feed" class="mb-4" />
+      <feed-tile :img="screenshare" text="My screen feed" class="mb-4" />
     </div>
     <div class="h-screen w-full flex justify-center items-center">
       <div class="bg-black w-5/6 h-2/3"></div>
@@ -26,6 +27,7 @@ import { ref } from 'vue';
 import AddMediaModal from '@/components/AddMediaModal.vue';
 import FeedTile from '@/components/FeedTile.vue';
 import camera from '../assets/camera.png';
+import screenshare from '../assets/screenshare.png';
 
 const isModalOpen = ref(false);
 
