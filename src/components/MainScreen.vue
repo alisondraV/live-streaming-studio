@@ -13,8 +13,9 @@
         class="mb-4"
       />
     </div>
-    <div class="h-screen w-full flex justify-center items-center">
+    <div class="h-screen w-full flex flex-col justify-center items-center">
       <feed-screen />
+      <feed-menu v-if="store.currentFeed" class="mt-4" />
     </div>
   </div>
   <div class="w-full flex justify-center">
@@ -33,10 +34,12 @@ import { ButtonVariant } from '@/utils';
 import MediaImportButton from '@/components/MediaImportButton.vue';
 import { ref } from 'vue';
 import AddMediaModal from '@/components/AddMediaModal.vue';
-import FeedTile from '@/components/FeedTile.vue';
+import FeedTile from '@/components/feed/FeedTile.vue';
 import camera from '../assets/camera.png';
 import screenshare from '../assets/screenshare.png';
-import FeedScreen from '@/components/FeedScreen.vue';
+import FeedScreen from '@/components/feed/FeedScreen.vue';
+import FeedMenu from '@/components/feed/FeedMenu.vue';
+import { store } from '@/store';
 
 const isModalOpen = ref(false);
 
