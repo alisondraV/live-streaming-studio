@@ -15,6 +15,7 @@ const props = defineProps<{
   text: string,
   type: keyof IFeed
 }>();
+const emit = defineEmits(['fileUploaded'])
 
 function onFileSelected(event: any) {
   const file = event.target.files[0];
@@ -25,6 +26,7 @@ function onFileSelected(event: any) {
 }
 
 function logFile (event: any) {
+  emit('fileUploaded');
   store.setFeed({ ...store.feed, [props.type]: event.target.result });
 }
 </script>

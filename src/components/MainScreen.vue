@@ -29,7 +29,7 @@
       <v-button label="Go Live" />
     </div>
   </div>
-  <add-media-modal v-if="isModalOpen" @click="toggleModal" />
+  <add-media-modal v-if="isModalOpen" @click="toggleModal" @close="toggleModal" />
 </template>
 
 <script lang="ts" setup>

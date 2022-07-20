@@ -5,12 +5,14 @@
         <h1 class="mb-4">Add a new media source</h1>
         <div class="flex gap-4">
           <add-media-tile
+            @file-uploaded="$emit('close')"
             class="flex-1"
             header="Screenshare"
             text="Share your entire screen, window or a specific Chrome tab"
             type="screen"
           />
           <add-media-tile
+            @file-uploaded="$emit('close')"
             class="flex-1"
             header="Video Feed"
             text="Share a feed of your in-built webcam and microphone. If you do not have a webcam,
