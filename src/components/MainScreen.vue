@@ -3,19 +3,23 @@
     <div class="h-screen p-4 w-1/5 border-r-2 border-gray2">
       <media-import-button @handle-button-click="toggleModal" class="mb-4" />
       <feed-tile
-        :img="camera"
+        v-if="store.feed.video"
+        :img="store.feed.video"
         text="My video feed"
         class="mb-4"
+        type="video"
       />
       <feed-tile
-        :img="screenshare"
+        v-if="store.feed.screen"
+        :img="store.feed.screen"
         text="My screen feed"
         class="mb-4"
+        type="screen"
       />
     </div>
     <div class="h-screen w-full flex flex-col justify-center items-center">
       <feed-screen />
-      <feed-menu v-if="store.currentFeed" class="mt-4" />
+      <feed-menu v-if="store.currentFeed.screen || store.currentFeed.video" class="mt-4" />
     </div>
   </div>
   <div class="w-full flex justify-center">
@@ -35,8 +39,6 @@ import MediaImportButton from '@/components/MediaImportButton.vue';
 import { ref } from 'vue';
 import AddMediaModal from '@/components/AddMediaModal.vue';
 import FeedTile from '@/components/feed/FeedTile.vue';
-import camera from '../assets/camera.png';
-import screenshare from '../assets/screenshare.png';
 import FeedScreen from '@/components/feed/FeedScreen.vue';
 import FeedMenu from '@/components/feed/FeedMenu.vue';
 import { store } from '@/store';

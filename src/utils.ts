@@ -9,3 +9,8 @@ export enum WebcamImageSize {
   Eighty = '80',
   Sixty = '60',
 }
+
+export interface IFeed {
+  video: string
+  screen: string
+}

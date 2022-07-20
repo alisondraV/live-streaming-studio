@@ -8,12 +8,14 @@
             class="flex-1"
             header="Screenshare"
             text="Share your entire screen, window or a specific Chrome tab"
+            type="screen"
           />
           <add-media-tile
             class="flex-1"
             header="Video Feed"
             text="Share a feed of your in-built webcam and microphone. If you do not have a webcam,
               you can use a “virtual” webcam such as Streamlabs OBS virtual camera"
+            type="video"
           />
         </div>
       </div>

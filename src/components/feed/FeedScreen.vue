@@ -4,8 +4,8 @@
     style="max-width: 1500px; width: 112vh; height: 63vh;"
   >
     <img
-      v-if="store.currentFeed"
-      :src="store.currentFeed"
+      v-if="store.currentFeed.video || store.currentFeed.screen"
+      :src="store.currentFeed.video || store.currentFeed.screen"
       :class="getImageClass()"
       alt="Feed"
     />
@@ -21,9 +21,9 @@ function getImageClass(): string {
     case WebcamImageSize.Full:
       return 'w-full h-full';
     case WebcamImageSize.Eighty:
-      return 'w-4/5';
+      return 'w-4/5 h-4/5';
     case WebcamImageSize.Sixty:
-      return 'w-3/5';
+      return 'w-3/5 h-3/5';
   }
 }
 </script>

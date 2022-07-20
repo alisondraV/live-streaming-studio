@@ -16,22 +16,23 @@
 
 <script lang="ts" setup>
 import VButton from '@/components/VButton.vue';
-import { ButtonVariant } from '@/utils';
+import { ButtonVariant, IFeed } from '@/utils';
 import { store } from '@/store';
 
 const props = defineProps<{
   img: string,
   text: string,
+  type: keyof IFeed
 }>();
 
 function isActiveTile(): boolean {
-  return store.currentFeed === props.img;
+  return store.currentFeed[props.type] === props.img;
 }
 
 function handleButtonClick() {
-  if (store.currentFeed === props.img) {
-    return store.setCurrentFeed('');
+  if (store.currentFeed[props.type] === props.img) {
+    return store.setCurrentFeed({ video: '', screen: '' });
   }
-  store.setCurrentFeed(props.img);
+  store.setCurrentFeed({ ...store.currentFeed, [props.type]: props.img });
 }
 </script>
