@@ -2,7 +2,11 @@ import { reactive } from 'vue';
 
 export const store = reactive({
   currentFeed: '',
-  updateCurrentFeed(feed: string) {
+  setCurrentFeed(feed: string) {
     this.currentFeed = feed;
-  }
+  },
+  webcamImageSize: '',
+  setWebcamImageSize(size: string) {
+    this.webcamImageSize = size;
+  },
 });

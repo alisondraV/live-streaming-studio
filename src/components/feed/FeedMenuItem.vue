@@ -1,34 +1,40 @@
 <template>
   <div
     class="rounded-xl w-20 h-14 cursor-pointer grid place-content-center"
-    :class="props.selected ? 'border border-pink-500 bg-pink-200' : 'bg-gray-200'"
+    :class="isSelected() ? 'border border-pink-500 bg-pink-200' : 'bg-gray-200'"
+    @click="store.setWebcamImageSize(props.size)"
   >
     <div
       class="rounded-lg bg-white grid place-content-center"
-      :class="`${props.selected ? 'bg-white' : 'bg-gray-300'} ${getItemStyle()}`"
+      :class="`${isSelected() ? 'bg-white' : 'bg-gray-300'} ${getItemStyle()}`"
     >
       <font-awesome-icon
         icon="fa-solid fa-user"
-        :class="props.selected ? 'text-pink-500' : 'text-gray-400'"
+        :class="isSelected() ? 'text-pink-500' : 'text-gray-400'"
       />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { store } from '@/store';
+
 const props = defineProps<{
-  selected?: boolean,
-  coverage?: string,
+  size?: string,
 }>();
 
+function isSelected(): boolean {
+  return store.webcamImageSize === props.size;
+}
+
 function getItemStyle(): string {
-  switch (props.coverage) {
+  switch (props.size) {
     case '80':
-      return 'w-14 h-8';
+      return 'w-14 h-10';
     case '60':
-      return 'w-12 h-7';
+      return 'w-12 h-9';
     default:
-      return 'w-16 h-10';
+      return 'w-18 h-12';
   }
 }
 </script>

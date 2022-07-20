@@ -13,6 +13,9 @@ module.exports = {
         emerald: '#128079',
         scarlet: '#F34848',
       },
+      width: {
+        '18': '4.5rem',
+      }
     },
   },
   plugins: [],

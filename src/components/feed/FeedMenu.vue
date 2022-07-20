@@ -1,8 +1,8 @@
 <template>
   <div class="inline-flex gap-2">
-    <feed-menu-item selected="true" />
-    <feed-menu-item coverage="80" />
-    <feed-menu-item coverage="60" />
+    <feed-menu-item />
+    <feed-menu-item size="80" />
+    <feed-menu-item size="60" />
   </div>
 </template>
 
