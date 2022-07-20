@@ -1,6 +1,6 @@
 <template>
     <button
-      @click="props.handleClick"
+      @click="$emit('handleClick')"
       :class="`rounded-lg w-full py-4 font-bold ${getVariantStyle()}`"
     >
       {{ props.label }}
@@ -12,7 +12,6 @@ import { ButtonVariant } from '@/utils';
 
 const props = defineProps<{
   label: string,
-  handleClick?: () => void,
   variant?: ButtonVariant
 }>();
 

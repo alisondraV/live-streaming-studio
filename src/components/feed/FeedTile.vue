@@ -7,7 +7,7 @@
     <v-button
       label="Show on stream"
       class="w-3/4"
-      :handle-click="handleButtonClick"
+      @handle-click="handleButtonClick"
       :variant="isActiveTile() ? ButtonVariant.Media : ButtonVariant.Primary"
     />
     <p class="text-white absolute bottom-2 left-2">{{ props.text }}</p>

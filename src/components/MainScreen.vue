@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div class="h-screen p-4 w-1/5 border-r-2 border-gray2">
-      <media-import-button :handle-button-click="toggleModal" class="mb-4" />
+      <media-import-button @handle-button-click="toggleModal" class="mb-4" />
       <feed-tile
         :img="camera"
         text="My video feed"
