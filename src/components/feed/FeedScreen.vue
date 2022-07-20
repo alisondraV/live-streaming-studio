@@ -14,15 +14,16 @@
 
 <script lang="ts" setup>
 import { store } from '@/store';
+import { WebcamImageSize } from '@/utils';
 
 function getImageClass(): string {
   switch (store.webcamImageSize) {
-    case '80':
-      return 'w-4/5';
-    case '60':
-      return 'w-3/5';
-    default:
+    case WebcamImageSize.Full:
       return 'w-full h-full';
+    case WebcamImageSize.Eighty:
+      return 'w-4/5';
+    case WebcamImageSize.Sixty:
+      return 'w-3/5';
   }
 }
 </script>

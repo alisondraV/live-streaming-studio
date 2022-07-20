@@ -3,3 +3,9 @@ export enum ButtonVariant {
   Secondary = 'secondary',
   Media = 'media',
 }
+
+export enum WebcamImageSize {
+  Full = '',
+  Eighty = '80',
+  Sixty = '60',
+}

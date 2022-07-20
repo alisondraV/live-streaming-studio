@@ -7,7 +7,7 @@
     <v-button
       label="Show on stream"
       class="w-3/4"
-      :handle-click="() => store.setCurrentFeed(img)"
+      :handle-click="handleButtonClick"
       :variant="isActiveTile() ? ButtonVariant.Media : ButtonVariant.Primary"
     />
     <p class="text-white absolute bottom-2 left-2">{{ props.text }}</p>
@@ -26,5 +26,12 @@ const props = defineProps<{
 
 function isActiveTile(): boolean {
   return store.currentFeed === props.img;
+}
+
+function handleButtonClick() {
+  if (store.currentFeed === props.img) {
+    return store.setCurrentFeed('');
+  }
+  store.setCurrentFeed(props.img);
 }
 </script>

@@ -12,7 +12,7 @@ import { ButtonVariant } from '@/utils';
 
 const props = defineProps<{
   label: string,
-  handleClick?: void,
+  handleClick?: () => void,
   variant?: ButtonVariant
 }>();
 
