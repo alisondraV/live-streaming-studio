@@ -30,12 +30,12 @@ function isSelected(): boolean {
 
 function getItemStyle(): string {
   switch (props.size) {
+    case WebcamImageSize.Full:
+      return 'w-18 h-12';
     case WebcamImageSize.Eighty:
       return 'w-14 h-10';
     case WebcamImageSize.Sixty:
       return 'w-12 h-9';
-    default:
-      return 'w-18 h-12';
   }
 }
 </script>

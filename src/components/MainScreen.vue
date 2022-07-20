@@ -19,7 +19,7 @@
     </div>
     <div class="h-screen w-full flex flex-col justify-center items-center">
       <feed-screen />
-      <feed-menu v-if="store.currentFeed.screen || store.currentFeed.video" class="mt-4" />
+      <feed-menu class="mt-4" />
     </div>
   </div>
   <div class="w-full flex justify-center">
@@ -29,7 +29,7 @@
       <v-button label="Go Live" />
     </div>
   </div>
-  <add-media-modal v-if="isModalOpen" @click="toggleModal" @close="toggleModal" />
+  <add-media-modal v-if="isModalOpen" @close="toggleModal" />
 </template>
 
 <script lang="ts" setup>

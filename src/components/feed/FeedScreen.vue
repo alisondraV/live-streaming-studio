@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-black m-12 flex items-center justify-center"
+    class="bg-black m-12 mb-0 flex items-center justify-center"
     style="max-width: 1500px; width: 112vh; height: 63vh;"
   >
     <img
