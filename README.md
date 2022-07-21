@@ -1,4 +1,5 @@
-# live-streaming-studio
+# Live-streaming-studio
+Basic interface of a web-based live-streaming studio.
 
 ## Project setup
 ```
@@ -19,6 +20,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
