@@ -31,7 +31,7 @@ function isActiveTile(): boolean {
 
 function handleButtonClick() {
   if (store.currentFeed[props.type] === props.img) {
-    return store.setCurrentFeed({ video: '', screen: '' });
+    return store.setCurrentFeed({ ...store.currentFeed, [props.type]: '' });
   }
   store.setCurrentFeed({ ...store.currentFeed, [props.type]: props.img });
 }

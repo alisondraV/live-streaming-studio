@@ -1,5 +1,5 @@
 import { reactive } from 'vue';
-import { IFeed, WebcamImageSize } from '@/utils';
+import { FeedLayout, IFeed, WebcamImageSize } from '@/utils';
 
 export const store = reactive({
   currentFeed: { video: '', screen: '' },
@@ -13,5 +13,9 @@ export const store = reactive({
   webcamImageSize: WebcamImageSize.Full,
   setWebcamImageSize(size: WebcamImageSize) {
     this.webcamImageSize = size;
+  },
+  selectedLayout: FeedLayout.OneInOneRight,
+  setSelectedLayout(layout: FeedLayout) {
+    this.selectedLayout = layout;
   },
 });

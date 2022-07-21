@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="fixed inset-0 z-50 h-full w-full grid place-items-center shadow-2xl">
+    <div class="fixed inset-0 z-40 grid place-items-center shadow-md">
       <div class="bg-white p-6 rounded-lg w-1/2">
         <h1 class="mb-4">Add a new media source</h1>
         <div class="flex gap-4">
@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div class='fixed inset-0 z-40 bg-white bg-opacity-70' />
+    <div class="fixed inset-0 z-30 bg-white bg-opacity-70" />
   </div>
 </template>
 
