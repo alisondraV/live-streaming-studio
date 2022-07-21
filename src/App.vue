@@ -1,7 +1,7 @@
 <template>
-  <MainScreen />
+  <home-page />
 </template>
 
 <script lang="ts" setup>
-import MainScreen from './components/MainScreen.vue';
+import HomePage from './HomePage.vue';
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div
-    class="bg-black m-12 flex items-center justify-center"
-    style="max-width: 1500px; width: 112vh; height: 63vh;"
+    class="bg-black m-12 flex items-center justify-center aspect-video
+      overflow-hidden w-[75%] max-w-[1500px]"
   >
     <div
       v-if="twoFeedsActive() && store.selectedLayout !== FeedLayout.Both"
